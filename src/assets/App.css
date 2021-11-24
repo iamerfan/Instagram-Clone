@@ -1,0 +1,1114 @@
+:root {
+   --BackgroundColor: rgb(255, 250, 250);
+   --BorderColor: rgba(128, 128, 128, 0.233);
+}
+#root {
+   background-color: var(--BackgroundColor);
+}
+@font-face {
+   font-family: DefaultFont;
+   src: url(./Proxima.otf);
+}
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: rgba(241, 241, 241, 0.8);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: rgba(187, 185, 185, 0.8);
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: DefaultFont;
+}
+i {
+   font-size: 1rem;
+   font-style: normal;
+}
+p {
+   margin: 0;
+   padding: 0;
+}
+
+.HomeDiv {
+   margin: 0;
+   padding: 0;
+   background-color: var(--BackgroundColor);
+}
+.Header {
+   position: relative;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   height: 55px;
+   width: 100%;
+   background-color: white;
+   border-bottom: 1px solid var(--BorderColor);
+}
+.Logo {
+   position: absolute;
+   left: 20%;
+   top: 25%;
+}
+.LogoSmall {
+   position: absolute;
+   left: 5%;
+   top: 25%;
+}
+.Icons {
+   font-size: 1.5rem;
+   width: 300px;
+   position: absolute;
+   right: 16%;
+   top: 10%;
+   gap: 1.2rem;
+   display: flex;
+   align-items: center;
+}
+
+.IconsSmall {
+   font-size: 1.5rem;
+   width: 300px;
+   position: absolute;
+   right: 2%;
+   gap: 1.2rem;
+   display: flex;
+   align-items: center;
+}
+
+.SearchBar {
+   position: absolute;
+   z-index: 2;
+   left: 50%;
+   transform: translate(-50%, 0);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+   width: max-content;
+   padding: 0.2rem 0.7rem;
+   color: gray;
+   background-color: rgba(252, 248, 248, 0.932);
+   border: 1px solid var(--BorderColor);
+   border-radius: 2px;
+}
+.SearchBar input {
+   font-size: 0.9rem;
+   background-color: transparent;
+   border: 0;
+}
+.SearchBar input:focus {
+   outline-offset: 0;
+   outline-width: 0;
+   outline: 0;
+   border: 0;
+}
+.Timeline {
+   background-color: var(--BackgroundColor);
+   min-height: 100vh;
+   max-width: 50%;
+}
+.Suggest {
+   opacity: 1;
+   position: fixed;
+   top: 55px;
+   right: 0;
+   background-color: var(--BackgroundColor);
+   min-height: 90vh;
+   width: 40%;
+   z-index: 2;
+   padding: 2rem;
+   gap: 1rem;
+   display: flex;
+   flex-direction: column;
+}
+.Posts {
+   margin-top: 1.5rem;
+   margin-left: 20%;
+   display: flex;
+   justify-content: center;
+   min-height: 200vh;
+   width: 40%;
+   gap: 1.5rem;
+   flex-direction: column;
+   background-color: var(--BackgroundColor);
+}
+.PostsMobile {
+   margin-top: 1.5rem;
+   margin-left: 0%;
+   display: flex;
+   justify-content: center;
+   min-height: 200vh;
+   width: 100%;
+   gap: 1.5rem;
+   flex-direction: column;
+   background-color: rgb(245, 243, 243);
+}
+.Post {
+   border: 1px solid var(--BorderColor);
+   background-color: #fff;
+   height: max-content;
+}
+.PostHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 1rem;
+   height: 60px;
+}
+
+.PostIMG {
+   position: relative;
+   background-color: rgba(245, 243, 243, 0.986);
+}
+.PostIMG img {
+   width: 100%;
+   height: 100%;
+}
+.DcIcon {
+   position: absolute;
+   opacity: 0;
+   transition: 0.5s;
+   left: 42%;
+   top: 50%;
+   transform: translate(0, -50%);
+   font-size: 8rem;
+   color: rgba(241, 241, 241, 0.8);
+}
+.PostIcons {
+   padding: 0 0.5rem 0.5rem 0.7rem;
+   font-size: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.PostDiscription {
+   padding: 0 1rem;
+   display: flex;
+   gap: 0.4rem;
+   align-items: center;
+}
+
+.PostLikes {
+   padding: 0 1rem;
+   font-size: 0.9rem;
+   font-weight: 350;
+}
+.PostPN {
+   font-weight: 700;
+   font-size: 0.9rem;
+}
+.PostComments {
+   padding: 0 1rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+   margin: 0.2rem 0 0.8rem 0;
+   opacity: 0.7;
+   font-size: 0.9rem;
+}
+.PostComments p {
+   margin: 0;
+}
+.PostDiscription p {
+   margin: 0;
+}
+
+.PostFooter {
+   padding: 0;
+}
+
+.PostInput {
+   display: flex;
+   align-items: center;
+   padding: 0.2rem 1rem;
+   border-top: 1px solid rgba(0, 0, 0, 0.151);
+   width: 100%;
+}
+.PostInput input {
+   margin: 0.5rem;
+   border: 0;
+   width: 90%;
+}
+.PostInput input:focus {
+   outline-offset: 0;
+   outline-width: 0;
+   outline: 0;
+   border: 0;
+}
+
+.blueBtn {
+   background-color: transparent;
+   border: 0;
+   color: dodgerblue;
+}
+.transBtn {
+   background-color: transparent;
+   border: 0;
+}
+.redBtn {
+   background-color: transparent;
+   border: 0;
+   color: red;
+}
+
+.PostProfile {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   font-size: 0.9rem;
+   font-weight: 600;
+   align-items: center;
+}
+.PostProfileName:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
+.PostProfileIMG {
+   border-radius: 50%;
+   height: 40px;
+   width: 40px;
+   background-color: rgba(230, 228, 228, 0.986);
+   border: 1px solid var(--BorderColor);
+}
+.PostProfileIMG img {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   padding: 0.1rem;
+}
+
+.PostTime {
+   font-size: 0.8rem;
+   opacity: 0.9;
+}
+.LeftPostIcons {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.7rem;
+   margin: 0.7rem 0 0.5rem 0;
+}
+.StoryDiv {
+   padding: 1rem 0rem;
+   display: flex;
+   background-color: #fff;
+   overflow: hidden;
+   border: 1px solid var(--BorderColor);
+}
+
+.Story {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.2rem;
+   margin-left: 1.5rem;
+}
+
+.StoryPN {
+   font-size: 0.7rem;
+   opacity: 1;
+   font-weight: 600;
+   cursor: pointer;
+   z-index: -1;
+}
+
+.StoryIMG {
+   z-index: -1;
+   border-radius: 50%;
+   border: 2px solid;
+   border-color: rgb(253, 51, 0);
+   height: 60px;
+   width: 60px;
+   margin-left: -5px;
+   background-color: rgba(230, 228, 228, 0.986);
+   user-select: none;
+   cursor: pointer;
+   display: flex;
+}
+.StoryIMG img {
+   -webkit-user-select: none;
+   user-select: none;
+   pointer-events: none;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   padding: 0.1rem;
+}
+.Story label {
+   -webkit-user-select: none;
+   user-select: none;
+}
+
+.StoryBtn {
+   border: 0;
+   overflow: hidden;
+   background-color: transparent;
+   width: 80px;
+}
+.AddBtnHeader {
+   font-size: 1.2rem;
+   font-weight: 700;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: solid 1px;
+   border-radius: 5px;
+}
+.CursorP {
+   cursor: pointer;
+}
+
+.Rotate180 {
+   transform: rotateY(180deg);
+}
+.Rotate45 {
+   transform: rotate(-45deg);
+}
+
+.SuggestFooter {
+   opacity: 0.5;
+   color: gray;
+   font-size: 0.8rem;
+}
+.border-radius-2 div {
+   position: relative;
+   border-radius: 20px !important;
+   border: none;
+   opacity: 1;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.NewMessage:first-child div {
+   border-radius: 20px !important;
+   border: none;
+   padding: 0.3rem;
+}
+.SendMessageHeader {
+   display: flex;
+   align-items: center;
+   padding: 0.5rem 1rem;
+   border-radius: 0;
+}
+.SendMessageHeader .Next {
+   border: 0;
+   color: rgb(3, 106, 241);
+   background-color: transparent;
+   position: absolute;
+   right: 5%;
+}
+.SendMessageHeader .Exit {
+   position: absolute;
+   cursor: pointer;
+   font-size: 2rem;
+   left: 5%;
+}
+.SendMessageHeader button:disabled {
+   opacity: 0.5;
+}
+.toInput {
+   display: flex;
+   gap: 1rem;
+   width: 100%;
+}
+.toInput input {
+   border: 0;
+   width: 90%;
+}
+.toInput input:focus {
+   outline: 0;
+}
+.SendMessageConversations {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   width: 100%;
+   overflow-y: scroll;
+   max-height: 300px;
+}
+.checkbox-round {
+   width: 1.3em;
+   height: 1.3em;
+   background-color: white;
+   border-radius: 50%;
+   vertical-align: middle;
+   border: 2px solid rgba(102, 100, 100, 0.61);
+   appearance: none;
+   -webkit-appearance: none;
+   outline: none;
+   cursor: pointer;
+}
+
+.checkbox-round:checked {
+   background-color: rgba(0, 195, 255, 0.575);
+}
+
+.AddPostLabel {
+   position: absolute;
+   top: 0;
+   text-align: center;
+   padding: 1rem;
+   width: 100%;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+}
+.DMContainer {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin: 1rem 0 1rem 0;
+   height: 85vh;
+}
+
+.DirectPanel {
+   position: relative;
+   display: flex;
+   width: 60%;
+   border: 1px solid var(--BorderColor);
+}
+.DirectPanelSmall {
+   position: relative;
+   display: flex;
+   width: 100%;
+   border: 1px solid var(--BorderColor);
+}
+.UserPanel {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 35%;
+   background: #fff;
+}
+.ChatPanel {
+   position: absolute;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   background: #fff;
+   width: 65%;
+   height: 100%;
+   border-left: 1px solid var(--BorderColor);
+}
+.ChatPanel img {
+   user-select: none;
+}
+.ChatHeader {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   padding: 1rem;
+   min-height: 60px;
+   border-bottom: 1px solid var(--BorderColor);
+}
+.ChatHeaderLeft {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem;
+   font-size: 0.9rem;
+   font-weight: bold;
+}
+
+.ChatFooter {
+   display: flex;
+   gap: 1rem;
+   padding: 0rem 1rem;
+   align-items: center;
+   height: 20%;
+   width: 100%;
+}
+.ChatFooter form {
+   width: 100%;
+}
+.InputChatPanel {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   border: 1px solid rgba(128, 128, 128, 0.433);
+   width: 100%;
+   padding: 0.2rem 1rem;
+   border-radius: 50px;
+}
+.InputChatPanel input {
+   border: 0;
+   width: 100%;
+}
+.ChatFooter .InputChatPanel input:focus {
+   outline-width: 0;
+}
+
+.ChatMessage {
+   display: flex;
+   flex-direction: column-reverse;
+   min-height: 65vh;
+   max-height: 65vh;
+   overflow-y: scroll;
+}
+
+.ChatMessage .Recieve {
+   position: relative;
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   padding: 0rem 1rem;
+}
+.ChatMessage .Recieve .Chatdiv {
+   border: 1px solid var(--BorderColor);
+   word-wrap: break-word;
+   padding: 1rem;
+   text-align: right;
+   border-radius: 30px;
+   max-width: 300px;
+}
+.ChatMessage .Send {
+   width: 100%;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: flex-end;
+   justify-content: flex-start;
+   padding: 1rem;
+}
+.ChatMessage .Send .Chatdiv {
+   word-wrap: break-word;
+   padding: 1rem;
+   background-color: rgb(228, 225, 225);
+   text-align: right;
+   border-radius: 30px;
+   max-width: 300px;
+}
+
+.ChatMessage .NoConversation {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.UserListHeader {
+   position: absolute;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   height: 60px;
+   width: 100%;
+   background: #fff;
+   border-bottom: 1px solid var(--BorderColor);
+}
+.UserListHeader label {
+   margin-left: auto;
+}
+.UserChats {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-top: 3.5rem;
+   padding: 1rem 0 0 0rem;
+   max-height: 90vh;
+   overflow-y: scroll;
+}
+.UserChats button {
+   padding: 0.5rem 1rem;
+}
+.hoverBgGray {
+   background-color: transparent;
+   border: 0;
+   padding: 0.5rem 0;
+}
+.hoverBgGray:hover {
+   background-color: rgba(58, 58, 58, 0.041);
+}
+.UserChats label {
+   text-align: left;
+}
+
+.UserSuggestText {
+   opacity: 0.5;
+   font-size: 0.9rem;
+}
+.ChatDiv {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   gap: 1rem;
+}
+.ChatDiv .PostProfileIMG {
+   height: 60px;
+   width: 60px;
+   border: 1px solid var(--BorderColor);
+}
+.ChatDiv label p {
+   margin: 0;
+}
+.StoryModalHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.StoryModalHeader button {
+   background: transparent;
+   color: white;
+   border: 0;
+   margin: 0 0.2rem;
+   font-size: 1.5rem;
+}
+.StoryFooter {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.StoryFooter .StoryInput {
+   display: flex;
+   align-items: center;
+   border: 1px solid #fff;
+   padding: 0.5rem 1.5rem;
+   border-radius: 50px;
+   width: 100%;
+}
+.StoryFooter .StoryInput input {
+   background: transparent;
+   border: 0;
+   color: #fff;
+   width: 100%;
+}
+.StoryFooter .StoryInput input::placeholder {
+   color: #fff;
+}
+.StoryFooter .StoryInput input:focus {
+   outline: 0;
+}
+.darkModal {
+   color: #fff;
+   min-height: 90vh;
+   max-height: 90vh;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.DirectStory {
+   background: transparent;
+   border: 0;
+   font-size: 1.7rem;
+   color: #fff;
+   margin-left: 0.5rem;
+}
+
+.RoundedStory div {
+   border-radius: 20px;
+   background-color: transparent;
+}
+.SearchPanel {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   min-height: 300px;
+   max-height: 500px;
+   padding: 1rem;
+   width: 350px;
+   top: 1.8rem;
+   background-color: #fff;
+   border-radius: 10px;
+   border: 1px solid var(--BorderColor);
+}
+.SearchbarHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.leftSide label {
+   color: #000;
+   font-weight: 600;
+   margin-left: 1rem;
+}
+.SearchHistoryDiv {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.SearchHistoryDiv button {
+   background-color: transparent;
+   border: 0;
+}
+
+.ExploreContainer {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   margin: 2rem 0 1rem 0;
+}
+
+.ExplorePanel {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
+   width: 60%;
+   min-height: 60vh;
+}
+.ExplorePanelSmall {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   width: 100%;
+   border: 1px solid var(--BorderColor);
+}
+
+.ExploreGridItem {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   align-items: center;
+   font-size: 2rem;
+   height: 35vh;
+   width: 100%;
+   background-color: var(--BorderColor);
+}
+.ExploreGridItem:hover .buttons {
+   opacity: 1;
+}
+.ExploreGridItem .buttons {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 3rem;
+   opacity: 0;
+   background-color: rgba(0, 0, 0, 0.26);
+   color: #fff;
+   height: 100%;
+   width: 100%;
+}
+.ExploreGridItem .buttons i {
+   display: flex;
+   gap: 0.5rem;
+}
+.ActivityPanel {
+   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.151);
+   padding: 1rem;
+   border-radius: 10px;
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   font-size: 0.9rem;
+   gap: 1rem;
+   position: absolute;
+   width: 35vw;
+   right: -5vw;
+   top: 0;
+}
+
+.popover-arrow {
+   visibility: hidden;
+}
+.dropdown-toggle::after {
+   visibility: hidden;
+}
+.ProfileDropdown {
+   position: absolute;
+   right: 10rem;
+}
+
+.dropdownItems {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+}
+.LoginContainer {
+   width: 100%;
+   min-height: 90vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   gap: 1rem;
+}
+.LoginDiv {
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--BorderColor);
+   padding: 1rem 0.5rem;
+   max-width: max-content;
+}
+.LoginDiv img {
+   width: 180px;
+   margin: 20px 0 -20px 0;
+}
+.LoginPanel {
+   display: flex;
+   flex-direction: column;
+   padding: 3rem 1rem;
+   min-width: 350px;
+}
+.LoginPasswordField {
+   position: relative;
+}
+.LoginShow {
+   position: absolute;
+   top: 1px;
+   height: 95%;
+   border-left: 1px solid var(--BorderColor);
+   right: 1px;
+}
+.LSignupDiv {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+   border: 1px solid var(--BorderColor);
+}
+.borderIcon {
+   border: 1px solid;
+   border-radius: 50%;
+   padding: 2rem;
+}
+
+.defaultNoconvo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.ChatDetails {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.ChatDetailsHeader {
+   width: 100%;
+   display: flex;
+   padding: 1rem;
+   justify-content: flex-end;
+   height: max-content;
+}
+.ChatDetailsHeader label {
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, 0);
+   font-weight: bold;
+}
+.ChatDetailsBody {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+.ChatDetailsBody .MutePanel {
+   border: 1px solid var(--BorderColor);
+   padding: 1rem;
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+}
+.ChatDetailsBody .MemberPanel {
+   position: relative;
+   border-bottom: 1px solid var(--BorderColor);
+   padding: 3rem 1rem 2rem 1rem;
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+}
+.ChatDetailsBody .MemberPanel label {
+   position: absolute;
+   top: 7%;
+   font-weight: bold;
+   font-size: 1.1rem;
+   left: 2%;
+}
+.ChatDetailsBody .OptionsPanel {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 1rem;
+   gap: 1rem;
+   border-bottom: 1px solid var(--BorderColor);
+}
+.PhoneDiv {
+   position: relative;
+   width: 500px;
+}
+.PhoneDiv .LoginCarousel {
+   top: 92px;
+   left: 145px;
+   width: 245px;
+   position: absolute;
+}
+.SignUpContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: rgb(247, 243, 243);
+}
+.SignUpPanel {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.7rem;
+}
+.SignupDiv {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border: solid 1px var(--BorderColor);
+   padding: 1rem;
+   width: 350px;
+   text-align: center;
+   background-color: rgb(255, 255, 255);
+}
+.SignupDiv img {
+   width: 200px;
+   margin: 1rem auto;
+}
+.SignupDiv .rules {
+   width: 70%;
+   font-size: 0.8rem;
+   opacity: 0.5;
+   margin: 0.5rem auto;
+}
+
+.HaveAnAccountDiv {
+   border: 1px solid var(--BorderColor);
+   width: 100%;
+   height: 100%;
+   padding: 1rem;
+   text-align: center;
+   background-color: rgb(255, 255, 255);
+}
+.GetApp {
+   text-align: center;
+}
+.GetApp img {
+   width: 136px;
+   margin: 1rem 0.5rem;
+}
+.ProfileContainer {
+   display: flex;
+   justify-content: center;
+}
+
+.ProfileDiv {
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+}
+.ProfileDivSmall {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+.ProfileTop {
+   display: flex;
+   gap: 2rem;
+   height: 35vh;
+}
+
+.ProfileTop .LogoDiv {
+   width: 30%;
+   display: flex;
+   margin: 2rem 0 0 1rem;
+   justify-content: center;
+   background-color: var(--BackgroundColor);
+}
+.ProfileTop .LogoDiv img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 1px solid var(--BorderColor);
+}
+.ProfileTop .InfoDiv {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   padding: 2rem 0;
+   min-width: 20vw;
+   min-height: 20vh;
+}
+.InfoDiv .FollowDiv {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+.FollowersDiv {
+   display: flex;
+   justify-content: space-between;
+}
+.FollowDiv i {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+.InfoDiv .bio {
+   height: 100%;
+}
+
+.HighlightBtn {
+   display: flex;
+   align-items: center;
+   background-color: transparent;
+   transform: scale(1.2);
+   height: 100px;
+   border: 0;
+}
+.HighlightBtn .StoryPN {
+   width: 100%;
+   font-size: calc(2vh * 0.7);
+}
+.HighlightBtn .StoryIMG {
+   border-color: var(--BorderColor);
+}
+.Highlights {
+   border-bottom: 1px solid var(--BorderColor);
+   padding-bottom: 5rem;
+}
+.ProfileBottom .Tabs {
+   display: flex;
+   justify-content: center;
+   gap: 3rem;
+}
+.Tabs Button {
+   padding-top: 0.5rem;
+}
+.TabActive {
+   border-top: 1px solid black;
+}
+
+.ProfilePosts {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
+   width: 100%;
+   margin: 2rem 0;
+}
+.ProfilePostsSmall {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   width: 100%;
+   margin: 2rem 0;
+}
+.ProfilePosts .ExploreGridItem {
+   max-width: 280px;
+   max-height: 280px;
+}
