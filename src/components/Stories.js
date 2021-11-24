@@ -7,7 +7,7 @@ import { Modal } from 'react-bootstrap';
 import { BiVolumeFull, BiVolumeMute, BiPlay, BiPause } from 'react-icons/bi';
 import { IoIosMore } from 'react-icons/io';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
-import { useSwipeable, config } from 'react-swipeable';
+import { useSwipeable } from 'react-swipeable';
 
 export default function Stories() {
    const data = useContext(DataContext);

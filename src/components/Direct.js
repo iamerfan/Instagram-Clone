@@ -6,7 +6,6 @@ import Conversation from './Conversation';
 import { IoIosClose } from 'react-icons/io';
 import { Modal } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
-import DirectDetails from './DirectDetails';
 
 export default function Direct() {
    const isD = useMediaQuery({

@@ -1,10 +1,8 @@
 import React, { useContext, useState } from 'react';
-import Story from './Story';
 import { DataContext } from '../context/DataContext';
 import myProfile from '../assets/myProfile.jpg';
 import { IoIosSettings } from 'react-icons/io';
-import { GoKebabHorizontal, GoVerified } from 'react-icons/go';
-import Stories from './Stories';
+import { GoVerified } from 'react-icons/go';
 import Highlights from './Highlights';
 import ExploreItem from './ExploreItem';
 import { useMediaQuery } from 'react-responsive';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsInfoCircle, BsInfoCircleFill } from 'react-icons/bs';
+import { BsInfoCircleFill } from 'react-icons/bs';
 
 export default function DirectDetails(props) {
    const user = props.SendData;
@@ -7,10 +7,7 @@ export default function DirectDetails(props) {
       <div className='ChatDetails '>
          <div className='ChatDetailsHeader'>
             <label>Details</label>
-            <BsInfoCircleFill
-               onClick={() => props.handleInfo(false)}
-               className='fs-4 '
-            />
+            <BsInfoCircleFill onClick={() => props.handleInfo(false)} className='fs-4 ' />
          </div>
          <div className='ChatDetailsBody'>
             <div className='MutePanel'>
